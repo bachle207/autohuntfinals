@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  color: var(--text-medium);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #0B0C10;
+}
+
+
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: #0B0C10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #0b1e33;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 1000;
+}
+
+/* Logo */
+.navbar__logo img {
+  height: 32px;
+  width: 117px;
+}
+
+/* NavLinks */
+.navbar__menu {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar__menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.navbar__menu a:hover {
+  color: #00bcd4;
+}
+
+.navbar__options {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar__options p {
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.login-page-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  background-color: #0B0C10;
+}
+
+.login-container {
+  display: flex;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.login-form-area {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #0B0C10;
+  color: white;
+}
+
+.welcome-box {
+  flex: 1;
+  border: 1px solid box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px;
+  color: white;
+  background-color: #12232E;
+  height: 700px;
+  width: 450px;
+}
+
+input[type="email"],
+input[type="tel"], 
+input[type="name"]  {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0 20px 0;
+  background-color: #12232E;
+  border: 1px solid;
+  color: white;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.password-input-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.password-input-container input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0 20px 0;
+  background-color: #12232E;
+  border: 1px solid;
+  color: white;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.password-input-container .password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 35%;
+  transform: translateY(-50%);
+  width: 20px;
+  text-align: center;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+
+.password-input-container .password-toggle:hover {
+  color: #66FCF1;
+}
+
+.signup-link {
+  color: white;
+}
+
+.login-button {
+  width: 100%;
+  padding: 15px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.password-input-container {
+  position: relative;
+}
+
+.site-footer {
+  background: #12232e;
+  color: #e6e6e6;
+  padding: 40px 80px;
+  border-top: 1px solid #1e3a5f;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-logo-container {
+  flex: 1 1 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-footer {
+  width: 120px;
+  height: auto;
+  filter: brightness(0.9);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  gap: 60px;
+  width: 100%;
+  padding-top: 30px;
+  border-top: 1px solid #1e3a5f;
+}
+
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: #b3b3b3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: var(--primary-blue);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #b3b3b3;
+  padding-top: 30px;
+  border-top: 1px solid #1e3a5f;
+  margin-top: 30px;
+}: ;

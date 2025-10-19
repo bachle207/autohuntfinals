@@ -1,0 +1,481 @@
+:root {
+  --primary-blue: #00bcd4;
+  --border-color: #2b3a50;
+  --card-background: #13243c;
+  --text-color: #e6e6e6;
+  --text-secondary: #b3b3b3;
+  --button-bg: #00bcd4;
+  --button-hover: #0097a7;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* RESET */
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #0b0c10;
+  color: #e6e6e6;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #0b1e33;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 1000;
+}
+
+/* Logo */
+.navbar__logo img {
+  height: 32px;
+  width: 117px;
+}
+
+/* NavLinks */
+.navbar__menu {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar__menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.navbar__menu a:hover {
+  color: #00bcd4;
+}
+
+.navbar__options {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar__options p {
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar__options a {
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+/* MAIN LAYOUT */
+.product-detail-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.product-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+/* GALLERY */
+.car-gallery {
+  max-width: 900px;
+  width: 100%;
+  text-align: left;
+}
+
+.main-image img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  transition: opacity 0.4s ease;
+}
+.thumb.active {
+  border-color: var(--primary-blue);
+  transform: scale(1.05);
+}
+.thumbnail-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumb {
+  width: 100px;
+  height: 70px;
+  border-radius: 5px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s;
+  border: 2px solid transparent;
+}
+
+.thumb:hover {
+  opacity: 1;
+}
+
+.thumb.active {
+  border: 2px solid #00aaff;
+  opacity: 1;
+}
+
+/* GRID LAYOUT */
+.product-content-area {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+/* SECTION */
+.section {
+  border-radius: 8px;
+  padding: 25px;
+}
+
+.section h3 {
+  color: var(--primary-blue);
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+}
+
+/* FEATURE GRID */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.feature-grid label {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* DEALER CARD */
+.dealer-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dealer-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+}
+
+.dealer-name {
+  color: white;
+  font-weight: 600;
+  margin: 0;
+}
+
+.dealer-title {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 0 0 5px 0;
+}
+
+.dealer-contact {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.contact-container {
+  background-color: #10141b;
+  padding: 25px 30px;
+  border-radius: 10px;
+  width: 94%;
+  height: auto;
+}
+
+.contact-container h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  min-width: 250px;
+  height: 50px;
+  margin-bottom: 20px;
+  padding-top: 27px;
+}
+
+.select-box {
+  border: none;
+  appearance: none;
+  padding: 0 30px 0 15px;
+  width: 100%;
+  color: white;
+  background-color: #152836;
+  border-radius: 4px;
+  position: relative;
+}
+
+input[id="email"],
+input[id="phonenumber"],
+input[id="name"],
+textarea[name="comment"] {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0 20px 0;
+  background-color: #12232E;
+  border: 1px solid;
+  color: white;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea[name="comment"] {
+  height: 150px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #007CC7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.submit-button:hover {
+  background-color: var(--button-hover);
+  box-shadow: 0 0 10px #00bcd4;
+  transition: 0.3s ease;
+}
+
+/* PRICE TAG */
+.price-tag {
+  height: 60px;
+  width: 400px;
+  display: flex;
+  background: transparent;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid blue;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* CAR DETAILS */
+.details-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #1e2e40;
+  padding: 6px 0;
+}
+
+.label {
+  color: var(--text-secondary);
+}
+
+.value {
+  color: white;
+  font-weight: 500;
+}
+
+.credit-simulation {
+  background: #071620;
+  padding: 30px;
+  border-radius: 8px;
+  width: 94%;
+  margin-top: 20px;
+}
+
+.credit-simulation h2 {
+  margin-bottom: 20px;
+}
+
+.simulation-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.inputs {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #C5C6C7;
+}
+
+.input-group input,
+.input-group select {
+  padding: 10px;
+  background: #0B0C10;
+  border: 1px solid #45A29E;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.result {
+  flex: 0.8;
+  border: 1px solid #45A29E;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #0B0C10;
+}
+
+.result h3 {
+  border-bottom: 1px solid #45A29E;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  color: #C5C6C7;
+}
+
+#monthly {
+  font-size: 28px;
+  font-weight: bold;
+  color: #66FCF1;
+}
+
+.map-container {
+  padding-top: 20px;
+  border-radius: 8px;
+}
+
+.site-footer {
+  background: #12232e;
+  color: #e6e6e6;
+  padding: 40px 80px;
+  border-top: 1px solid #1e3a5f;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.footer-logo-container {
+  flex: 1 1 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-footer {
+  width: 120px;
+  height: auto;
+  filter: brightness(0.9);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  gap: 60px;
+  width: 100%;
+  padding-top: 30px;
+  border-top: 1px solid #1e3a5f;
+}
+
+.footer-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 8px;
+}
+
+.footer-column a {
+  color: #b3b3b3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: var(--primary-blue);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #b3b3b3;
+  padding-top: 30px;
+  border-top: 1px solid #1e3a5f;
+  margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .product-content-area {
+    grid-template-columns: 1fr;
+  }
+  .simulation-container {
+    flex-direction: column;
+  }
+}
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
