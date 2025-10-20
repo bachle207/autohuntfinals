@@ -62,6 +62,17 @@ a {
   align-items: center;
   gap: 5px;
 }
+
+.navbar__options a {
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  text-decoration: none;
+}
+
 .site-footer {
     background-color:#12232E;
     padding: 30px 50px 10px 50px;
@@ -245,3 +256,9 @@ button {
   font-size: inherit;
   color: inherit;
 }
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }

@@ -251,4 +251,25 @@ input[type="name"]  {
   padding-top: 30px;
   border-top: 1px solid #1e3a5f;
   margin-top: 30px;
-}: ;
+}
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .welcome-box {
+    order: -1;
+    width: 100%;
+  }
+
+  .login-form-area {
+    padding: 40px 20px;
+  }
+
+.footer-links {
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+}

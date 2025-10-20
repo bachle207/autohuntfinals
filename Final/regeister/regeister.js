@@ -73,3 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
     console.error('Form element not found on page.');
   }
 });
+
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.navbar__menu');
+
+hamburger.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});

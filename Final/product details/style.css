@@ -75,14 +75,23 @@ body {
 }
 
 .navbar__options a {
-  cursor: pointer;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: white;
   text-decoration: none;
 }
+
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.navbar__toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
 
 /* MAIN LAYOUT */
 .product-detail-page {
@@ -458,6 +467,7 @@ textarea[name="comment"] {
   border-top: 1px solid #1e3a5f;
   margin-top: 30px;
 }
+
 @media (max-width: 768px) {
   .footer-links {
     flex-direction: column;
@@ -470,7 +480,33 @@ textarea[name="comment"] {
   .simulation-container {
     flex-direction: column;
   }
+.navbar__menu {
+    display: none;
+    flex-direction: column;
+    background: #0b1e33;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .navbar__menu.active {
+    display: flex;
+  }
+  
+
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__options {
+    display: none;
+  }
 }
+
+
 input,
 select,
 textarea,
